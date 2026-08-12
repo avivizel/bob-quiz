@@ -2,6 +2,8 @@
 
 An interactive, Hebrew-language glossary quiz app built as a static website. It helps IBM teams learn and explore key Vibe Coding and IBM Bob terminology through a clean, card-style reveal interface — no frameworks, no build step, just plain HTML, CSS, and JavaScript.
 
+🔗 **Live app: [https://ibm.biz/bob-quiz](https://ibm.biz/bob-quiz)**
+
 ---
 
 ## 📖 What Is This?
