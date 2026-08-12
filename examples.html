@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vibe Coding — דוגמאות למונחים</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+      <span class="grid-fade"></span>
+    </div>
+
+    <header class="page-header">
+      <div class="header-inner">
+        <div class="brand-lockup">
+          <img
+            class="bob-mascot"
+            src="assets/bob-mascot.png?v=2"
+            alt="Bob"
+            width="100"
+            height="100"
+          />
+          <div class="brand-text">
+            <div class="brand-row">
+              <span class="brand-mark" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </span>
+              <p class="eyebrow">עמוד דוגמאות · IBM Bob</p>
+            </div>
+            <h1>דוגמאות</h1>
+          </div>
+        </div>
+        <p class="subtitle">
+          כל מונחי החידון מוצגים כאן. למונחים הרלוונטיים יש כפתור
+          <strong>דוגמה</strong> שפותח חלון עם דוגמה מוגדרת. העמוד נפרד ואינו
+          משנה את חידוני Vibe / Bob.
+        </p>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="panel toolbar-panel">
+        <div class="toolbar">
+          <label class="search-field" for="search">
+            <span class="search-label">חיפוש מונח</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="למשל: Prompt, Diff, .bobignore…"
+              autocomplete="off"
+            />
+          </label>
+          <div class="toolbar-actions">
+            <button type="button" class="btn" id="hide-all">הסתר הכול</button>
+            <p class="count" id="count" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div
+          class="category-filters"
+          id="category-filters"
+          role="group"
+          aria-label="סינון לפי קטגוריה"
+        ></div>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="table-shell">
+          <table class="glossary">
+            <thead>
+              <tr>
+                <th scope="col" class="col-num">#</th>
+                <th scope="col" class="col-term">מונח</th>
+                <th scope="col" class="col-explanation">הסבר</th>
+                <th scope="col" class="col-meaning">המשמעות בפועל</th>
+              </tr>
+            </thead>
+            <tbody id="glossary-body"></tbody>
+          </table>
+          <p class="empty" id="empty" hidden>
+            לא נמצאו מונחים התואמים לחיפוש או לקטגוריה.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <address class="footer-contact">
+        <strong>Avi Vizel</strong>
+        <a href="mailto:aviv@il.ibm.com">aviv@il.ibm.com</a>
+        <a href="tel:+972507292012">050-7292012</a>
+        <span>IBM Israel</span>
+      </address>
+    </footer>
+
+    <div
+      id="example-modal"
+      class="example-modal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="example-modal-title"
+    >
+      <div class="example-modal-panel">
+        <div class="example-modal-header">
+          <h2 id="example-modal-title">דוגמה</h2>
+          <button
+            type="button"
+            class="example-modal-close"
+            id="example-modal-close"
+            aria-label="סגור"
+          >
+            ×
+          </button>
+        </div>
+        <div class="example-modal-body" id="example-modal-body"></div>
+      </div>
+    </div>
+
+    <script src="terms.js"></script>
+    <script src="examples-terms.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
